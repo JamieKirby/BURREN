@@ -1,0 +1,303 @@
+{
+  "tab": "Flora — Flowers & Grasses",
+  "discipline": "flora",
+  "entries": [
+    {
+      "slug": "eyebright",
+      "commonName": "Eyebright",
+      "scientificName": "Euphrasia officinalis",
+      "category": "Plant / Herb",
+      "specimenFamily": "herb",
+      "description": "Low-growing semi-parasitic herb from the Burren karst; its tannins are extracted via cold spring water and linen filtration for ocular care.",
+      "oghamName": "ᚓᚑᚋᚏᚐᚄᚔᚐ",
+      "oghamGloss": "Euphrasia",
+      "habitatTags": ["Limestone Pavement"]
+    },
+    {
+      "slug": "mountain-avens",
+      "commonName": "Mountain Avens",
+      "scientificName": "Dryas octopetala",
+      "category": "Flower",
+      "specimenFamily": "flower",
+      "description": "Iconic arctic-alpine creeping dwarf shrub covering the limestone pavement with white eight-petaled blossoms.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Limestone Pavement"]
+    },
+    {
+      "slug": "spring-gentian",
+      "commonName": "Spring Gentian",
+      "scientificName": "Gentiana verna",
+      "category": "Flower",
+      "specimenFamily": "flower",
+      "description": "Renowned for its intensely vivid blue star-shaped flowers carpeting the short turf in spring.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Short Turf / Grassland"]
+    },
+    {
+      "slug": "bloody-cranes-bill",
+      "commonName": "Bloody Crane's-bill",
+      "scientificName": "Geranium sanguineum",
+      "category": "Flower",
+      "specimenFamily": "flower",
+      "description": "Vibrant magenta wildflower that thrives across the exposed limestone rocks and hazel scrub.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Exposed Limestone Rock", "Hazel Scrub"]
+    },
+    {
+      "slug": "orchis-early-purple-orchid",
+      "commonName": "Orchis / Early Purple Orchid",
+      "scientificName": "Orchis mascula",
+      "category": "Flower",
+      "specimenFamily": "orchid",
+      "description": "Striking purple spike orchid emerging early in the woodland clearings and sheltered grassland grips.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Hazel Woodland", "Grassland Grips"]
+    },
+    {
+      "slug": "pyramidal-orchid",
+      "commonName": "Pyramidal Orchid",
+      "scientificName": "Anacamptis pyramidalis",
+      "category": "Flower",
+      "specimenFamily": "orchid",
+      "description": "Distinctive dense pink conical flower heads found commonly across the dry calcareous pastures.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Calcareous Grassland"]
+    },
+    {
+      "slug": "bee-orchid",
+      "commonName": "Bee Orchid",
+      "scientificName": "Ophrys apifera",
+      "category": "Flower",
+      "specimenFamily": "orchid",
+      "description": "Mimicry orchid featuring a lip designed to resemble a female bee to attract pollinators.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": []
+    },
+    {
+      "slug": "fly-orchid",
+      "commonName": "Fly Orchid",
+      "scientificName": "Ophrys insectifera",
+      "category": "Flower",
+      "specimenFamily": "orchid",
+      "description": "Slender dark orchid species mimicking insect morphology found in damp calcareous scrub edges.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Hazel Scrub"]
+    },
+    {
+      "slug": "butterfly-orchid",
+      "commonName": "Butterfly Orchid",
+      "scientificName": "Platanthera chlorantha",
+      "category": "Flower",
+      "specimenFamily": "orchid",
+      "description": "Pale green-white orchid with long spurs known for its nocturnal fragrance and moth pollination.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": []
+    },
+    {
+      "slug": "burnet-rose",
+      "commonName": "Burnet Rose",
+      "scientificName": "Rosa pimpinellifolia",
+      "category": "Flower / Shrub",
+      "specimenFamily": "flower",
+      "description": "Low, suckering native rose with creamy white blooms and dark hips across limestone dunes and pavement.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Coastal Dune", "Limestone Pavement"]
+    },
+    {
+      "slug": "hairy-violet",
+      "commonName": "Hairy Violet",
+      "scientificName": "Viola hirta",
+      "category": "Flower",
+      "specimenFamily": "flower",
+      "description": "Low perennial violet species inhabiting dry limestone grassland and scrub margins.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Calcareous Grassland", "Hazel Scrub"]
+    },
+    {
+      "slug": "kidney-vetch",
+      "commonName": "Kidney Vetch",
+      "scientificName": "Anthyllis vulneraria",
+      "category": "Flower",
+      "specimenFamily": "legume",
+      "description": "Silky-haired yellow globe flower acting as a primary food plant for small blue butterfly larvae.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": []
+    },
+    {
+      "slug": "horseshoe-vetch",
+      "commonName": "Horseshoe Vetch",
+      "scientificName": "Hippocrepis comosa",
+      "category": "Flower",
+      "specimenFamily": "legume",
+      "description": "Mat-forming legume with clusters of yellow horseshoe-shaped pods favored by chalk hill blues.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": []
+    },
+    {
+      "slug": "blue-fleabane",
+      "commonName": "Blue Fleabane",
+      "scientificName": "Erigeron acris",
+      "category": "Flower",
+      "specimenFamily": "flower",
+      "description": "Small composite flower with purple-pink ray florets thriving on bare gravelly limestone.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Exposed Limestone Rock"]
+    },
+    {
+      "slug": "thyme-leaved-speedwell",
+      "commonName": "Thyme-leaved Speedwell",
+      "scientificName": "Veronica serpyllifolia",
+      "category": "Flower",
+      "specimenFamily": "flower",
+      "description": "Small creeping ground cover with pale blue flowers in open turf gaps.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Short Turf / Grassland"]
+    },
+    {
+      "slug": "wild-thyme",
+      "commonName": "Wild Thyme",
+      "scientificName": "Thymus drucei",
+      "category": "Herb",
+      "specimenFamily": "herb",
+      "description": "Low aromatic creeping woody perennial forming fragrant purple mats over sun-baked rocks.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Exposed Limestone Rock"]
+    },
+    {
+      "slug": "milkwort",
+      "commonName": "Milkwort",
+      "scientificName": "Polygala vulgaris",
+      "category": "Flower",
+      "specimenFamily": "flower",
+      "description": "Low perennial bearing intense blue, pink, or white tufted racemes in short pasture turf.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Short Turf / Grassland"]
+    },
+    {
+      "slug": "eyebright-slender",
+      "commonName": "Eyebright (Slender)",
+      "scientificName": "Euphrasia salisburgensis",
+      "category": "Plant / Herb",
+      "specimenFamily": "herb",
+      "description": "Alpine-celtic variant of eyebright adapted to exposed limestone pavement ecosystems.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Limestone Pavement"]
+    },
+    {
+      "slug": "yellow-rattle",
+      "commonName": "Yellow Rattle",
+      "scientificName": "Rhinanthus minor",
+      "category": "Plant / Herb",
+      "specimenFamily": "herb",
+      "description": "Semi-parasitic herbaceous annual with yellow blooms that suppresses coarse grasses to aid diversity.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": []
+    },
+    {
+      "slug": "quaking-grass",
+      "commonName": "Quaking Grass",
+      "scientificName": "Briza media",
+      "category": "Grass",
+      "specimenFamily": "grass",
+      "description": "Graceful perennial grass with heart-shaped spikelets that tremble continuously in light breezes.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": []
+    },
+    {
+      "slug": "blue-moor-grass",
+      "commonName": "Blue Moor-grass",
+      "scientificName": "Sesleria caerulea",
+      "category": "Grass",
+      "specimenFamily": "grass",
+      "description": "Dominant turf-forming grass of the limestone pavements with silvery-blue early spring panicles.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Limestone Pavement"]
+    },
+    {
+      "slug": "sheeps-fescue",
+      "commonName": "Sheep's Fescue",
+      "scientificName": "Festuca ovina",
+      "category": "Grass",
+      "specimenFamily": "grass",
+      "description": "Fine-leaved tufted bunchgrass adapting tightly to dry upland sheep-grazed limestone soils.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": []
+    },
+    {
+      "slug": "crested-hair-grass",
+      "commonName": "Crested Hair-grass",
+      "scientificName": "Koeleria macrantha",
+      "category": "Grass",
+      "specimenFamily": "grass",
+      "description": "Compact perennial grass forming dense tufts across dry calcareous grassland slopes.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Calcareous Grassland"]
+    },
+    {
+      "slug": "red-fescue",
+      "commonName": "Red Fescue",
+      "scientificName": "Festuca rubra",
+      "category": "Grass",
+      "specimenFamily": "grass",
+      "description": "Creeping rhizomatous grass common in coastal machair and stable dune fringes.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Coastal Dune"]
+    },
+    {
+      "slug": "sweet-vernal-grass",
+      "commonName": "Sweet Vernal-grass",
+      "scientificName": "Anthoxanthum odoratum",
+      "category": "Grass",
+      "specimenFamily": "grass",
+      "description": "Early-flowering fragrant grass containing coumarin, giving off a distinct scent of new-mown hay.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Meadow"]
+    },
+    {
+      "slug": "downy-oat-grass",
+      "commonName": "Downy Oat-grass",
+      "scientificName": "Helictotrichon pubescens",
+      "category": "Grass",
+      "specimenFamily": "grass",
+      "description": "Soft, downy-leaved perennial grass growing in rich limestone meadows and ungrazed grips.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": ["Meadow", "Grassland Grips"]
+    },
+    {
+      "slug": "cocks-foot",
+      "commonName": "Cock's-foot",
+      "scientificName": "Dactylis glomerata",
+      "category": "Grass",
+      "specimenFamily": "grass",
+      "description": "Tall tussock-forming grass with dense, one-sided cluster panicles along field boundaries.",
+      "oghamName": null,
+      "oghamGloss": null,
+      "habitatTags": []
+    }
+  ]
+}

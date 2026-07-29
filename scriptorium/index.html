@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Burren Scriptorium — A Field Guide to the Burren</title>
+<meta name="description" content="A digital field guide to the natural history, antiquities, and Gaelic lore of the Burren, Co. Clare — flora, fauna, geology, archaeology, and folklore, each with its own page.">
+<link rel="canonical" href="https://jamiekirby.github.io/BURREN-MAP/scriptorium/">
+
+<meta property="og:title" content="The Burren Scriptorium">
+<meta property="og:description" content="A digital field guide to the natural history, antiquities, and Gaelic lore of the Burren, Co. Clare.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jamiekirby.github.io/BURREN-MAP/scriptorium/">
+<meta property="og:site_name" content="The Burren Scriptorium">
+
+<link rel="stylesheet" href="assets/scriptorium.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "The Burren Scriptorium",
+  "url": "https://jamiekirby.github.io/BURREN-MAP/scriptorium/",
+  "description": "A digital field guide to the natural history, antiquities, and Gaelic lore of the Burren, Co. Clare."
+}
+</script>
+<style>
+  .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 32px; }
+  .category-card {
+    display: block; text-decoration: none; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08);
+    border-radius: 8px; padding: 20px; transition: border-color .15s ease, background .15s ease;
+  }
+  .category-card.ready:hover { border-color: var(--accent); background: rgba(255,255,255,.05); }
+  .category-card.pending { opacity: .55; cursor: default; }
+  .category-card h2 { margin: 0 0 6px; font-size: 1.2rem; font-weight: 400; color: var(--ink); }
+  .category-card p { margin: 0; font-size: .85rem; color: var(--ink-dim); line-height: 1.55; }
+  .category-card .count { font-size: .7rem; color: var(--parchment); text-transform: uppercase; letter-spacing: .5px; margin-top: 10px; display: block; }
+</style>
+</head>
+<body>
+<nav class="scriptorium-nav">
+  <a class="brand" href="index.html">The Burren Scriptorium</a>
+  <div class="crumbs"><a href="../burren-real-map.html">&larr; Interactive Map</a></div>
+  <div class="nav-actions">
+    <button class="search-trigger" id="searchTrigger">Search <kbd>&#8984;K</kbd></button>
+  </div>
+</nav>
+
+<div class="ambient-backdrop"><svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice"></svg></div>
+
+<main class="hub-page">
+  <h1>The Burren Scriptorium</h1>
+  <p class="lede">A field guide to the natural history, antiquities, and Gaelic lore of the Burren, Co. Clare &mdash; read alongside the <a href="../burren-real-map.html">interactive map</a>. Every entry below lives on its own page.</p>
+
+  <div class="category-grid">
+    <a class="category-card ready" href="flora/">
+      <h2>Flora</h2>
+      <p>Wildflowers, grasses, herbs, orchids &mdash; the plant life of the karst.</p>
+      <span class="count">27 entries</span>
+    </a>
+    <div class="category-card pending">
+      <h2>Fauna</h2>
+      <p>Butterflies, birds, mammals, and more &mdash; not yet built out.</p>
+      <span class="count">Coming soon</span>
+    </div>
+    <div class="category-card pending">
+      <h2>Sites &amp; Towns</h2>
+      <p>Archaeology, geology, and settlements &mdash; already on the map, static pages next.</p>
+      <span class="count">Coming soon</span>
+    </div>
+    <div class="category-card pending">
+      <h2>Lore</h2>
+      <p>Folklore and legend tied to specific places across the Burren.</p>
+      <span class="count">Coming soon</span>
+    </div>
+  </div>
+</main>
+
+<script src="assets/scriptorium-search.js"></script>
+<script>
+  ScriptoriumSearch.init({
+    scriptoriumRootPrefix: '',
+    dataUrls: ['data/flora-flowers-grasses.json'],
+    entryLinkFn: function (e) { return 'flora/' + e.slug + '/'; }
+  });
+  document.getElementById('searchTrigger').addEventListener('click', function () { ScriptoriumSearch.open(); });
+</script>
+</body>
+</html>

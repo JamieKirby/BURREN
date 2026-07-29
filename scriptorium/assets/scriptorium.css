@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Scriptorium shared stylesheet
+   Same dark-canvas / parchment / discipline-colour design language as the
+   interactive map (burren-real-map.html) — extracted here as a shared file
+   since these are multiple standalone pages, not one self-contained file.
+   ========================================================================== */
+
+:root {
+  --canvas: #121212;
+  --canvas-soft: #1a1a1a;
+  --ink: #e9e4d8;
+  --ink-dim: #a9a296;
+  --ink-prose: #cfc9bc;
+  --parchment: #ded2b3;
+
+  --flora: #4A6B53;
+  --geology: #5C6B73;
+  --archaeology: #A9822E;
+  --lore: #35617A;
+
+  --flora-soft: rgba(74,107,83,.75);
+  --geology-soft: rgba(92,107,115,.75);
+  --archaeology-soft: rgba(169,130,46,.75);
+  --lore-soft: rgba(53,97,122,.75);
+
+  --accent: var(--flora);
+  --accent-soft: var(--flora-soft);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0; background: var(--canvas); color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  min-height: 100%;
+}
+a { color: inherit; }
+
+/* ---- Top nav ---- */
+.scriptorium-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px; background: var(--canvas-soft); border-bottom: 1px solid rgba(255,255,255,.08);
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.scriptorium-nav .brand { font-family: Georgia, serif; font-size: 1.05rem; color: var(--parchment); text-decoration: none; letter-spacing: .3px; }
+.scriptorium-nav .crumbs { font-size: .82rem; color: var(--ink-dim); }
+.scriptorium-nav .crumbs a { text-decoration: none; color: var(--ink-dim); }
+.scriptorium-nav .crumbs a:hover { color: var(--parchment); }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.search-trigger {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.14);
+  color: var(--ink-dim); border-radius: 20px; padding: 7px 14px; font-size: .8rem;
+  font-family: -apple-system, sans-serif; cursor: pointer;
+}
+.search-trigger:hover { color: var(--ink); border-color: var(--parchment); }
+.search-trigger kbd {
+  font-family: -apple-system, sans-serif; font-size: .68rem; background: rgba(255,255,255,.08);
+  border-radius: 4px; padding: 1px 5px; color: var(--ink-dim);
+}
+
+/* ---- Ambient Ogham/Latin backdrop (repeats across entry + hub pages) ---- */
+.ambient-backdrop {
+  position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; opacity: .05;
+}
+.ambient-backdrop svg { width: 140%; height: 140%; position: absolute; top: -20%; left: -20%; }
+.ambient-row { fill: none; stroke: var(--parchment); font-family: Georgia, serif; }
+.ambient-row text { font-size: 42px; fill: var(--parchment); }
+
+/* ---- Specimen illustration engine (shared across every family) ---- */
+.specimen-stage { width: 100%; max-width: 320px; margin: 0 auto; }
+.specimen-stage svg { width: 100%; height: auto; }
+.specimen-line { fill: none; stroke: var(--accent); stroke-width: 1.6; }
+.specimen-leader { fill: none; stroke: var(--accent); stroke-width: 1; stroke-dasharray: 3 4; opacity: .7; }
+.specimen-label { font-family: Georgia, serif; font-size: 15px; fill: var(--parchment); letter-spacing: .04em; }
+
+/* ---- Entry page layout ---- */
+.entry-page { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 48px 24px 80px; }
+.entry-header { display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+.entry-header h1 { font-size: 2rem; font-weight: 400; color: var(--ink); margin: 0 0 4px; }
+.play-pronunciation {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%; margin-top: 4px;
+  background: rgba(255,255,255,.05); border: 1px solid var(--accent-soft); color: var(--parchment);
+  cursor: pointer; flex: 0 0 auto; transition: background .15s ease;
+}
+.play-pronunciation:hover { background: rgba(255,255,255,.1); }
+.play-pronunciation svg { width: 13px; height: 13px; }
+.play-pronunciation.playing { animation: pulse-ring 1s ease-in-out infinite; }
+@keyframes pulse-ring { 0%,100% { box-shadow: 0 0 0 0 var(--accent-soft); } 50% { box-shadow: 0 0 0 6px transparent; } }
+
+.scientific-name { font-style: italic; color: var(--ink-dim); font-size: 1.05rem; margin: 0 0 6px; }
+.ogham-name { font-size: 1.3rem; color: var(--parchment); margin: 4px 0 2px; }
+.ogham-gloss { font-size: .8rem; color: var(--ink-dim); font-style: italic; margin: 0 0 14px; }
+
+.badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 22px; }
+.badge {
+  display: inline-block; font-size: .7rem; text-transform: uppercase; letter-spacing: .6px;
+  color: var(--accent-tag, var(--parchment)); border: 1px solid var(--accent-tag, var(--parchment));
+  border-radius: 20px; padding: 3px 11px; opacity: .9;
+}
+.badge.habitat { border-style: dashed; opacity: .75; }
+
+.entry-body-grid { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: 40px; align-items: start; margin-top: 20px; }
+@media (max-width: 720px) { .entry-body-grid { grid-template-columns: 1fr; } .specimen-stage { max-width: 220px; } }
+
+.entry-prose { font-size: 1.02rem; line-height: 1.75; color: var(--ink-prose); }
+.inferred-note {
+  margin-top: 22px; padding: 10px 12px; border-radius: 4px; font-style: italic; font-size: .78rem; line-height: 1.55;
+  background: rgba(255,255,255,.04); border-left: 2px solid var(--accent-soft); color: var(--ink-dim);
+}
+.back-link { display: inline-block; margin-top: 32px; font-size: .85rem; color: var(--ink-dim); text-decoration: none; }
+.back-link:hover { color: var(--parchment); }
+
+/* ---- Hub / listing grid ---- */
+.hub-page { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+.hub-page h1 { font-size: 2.1rem; font-weight: 400; color: var(--ink); }
+.hub-page .lede { color: var(--ink-dim); font-size: 1rem; max-width: 640px; line-height: 1.7; }
+.entry-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 32px; }
+.entry-card {
+  display: block; text-decoration: none; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px; padding: 16px; transition: border-color .15s ease, background .15s ease;
+}
+.entry-card:hover { border-color: var(--accent); background: rgba(255,255,255,.05); }
+.entry-card h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 400; color: var(--ink); }
+.entry-card .sci { font-style: italic; color: var(--ink-dim); font-size: .82rem; margin: 0 0 8px; }
+.entry-card .badge { font-size: .62rem; padding: 2px 8px; }
+
+/* ==========================================================================
+   Search drawer (Cmd+K) — atmospheric overlay, shared across Scriptorium
+   pages. On the map page this same visual language is reproduced inline
+   (see burren-real-map.html) so the map stays a single self-contained file.
+   ========================================================================== */
+.search-overlay {
+  position: fixed; inset: 0; z-index: 200; background: rgba(10,10,10,.6);
+  backdrop-filter: blur(2px); display: none; align-items: flex-start; justify-content: center;
+  padding: 8vh 16px 0;
+}
+.search-overlay.open { display: flex; }
+.search-drawer {
+  width: min(640px, 100%); max-height: 76vh; display: flex; flex-direction: column;
+  background: rgba(18,18,18,.98); border: 1px solid rgba(255,255,255,.12); border-radius: 10px;
+  box-shadow: 0 24px 64px rgba(0,0,0,.55); overflow: hidden;
+}
+.search-input-row { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.search-input-row svg { width: 16px; height: 16px; color: var(--ink-dim); flex: 0 0 auto; }
+.search-input {
+  flex: 1; background: transparent; border: none; outline: none; color: var(--ink);
+  font-family: -apple-system, sans-serif; font-size: 1rem;
+}
+.search-input::placeholder { color: var(--ink-dim); }
+.search-esc { font-size: .68rem; color: var(--ink-dim); border: 1px solid rgba(255,255,255,.14); border-radius: 4px; padding: 2px 6px; }
+
+.search-facets { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 18px; border-bottom: 1px solid rgba(255,255,255,.06); }
+.facet-chip {
+  font-family: -apple-system, sans-serif; font-size: .72rem; background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.14); color: var(--ink-dim); border-radius: 14px; padding: 4px 10px; cursor: pointer;
+}
+.facet-chip[data-active="true"] { color: var(--ink); border-color: var(--parchment); background: rgba(222,210,179,.1); }
+.facet-chip.wander { margin-left: auto; color: var(--parchment); border-color: var(--parchment); }
+
+.search-results { overflow-y: auto; padding: 8px; flex: 1; }
+.search-empty { padding: 24px 16px; text-align: center; color: var(--ink-dim); font-size: .85rem; font-family: -apple-system, sans-serif; }
+.result-card {
+  display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 8px; cursor: pointer;
+}
+.result-card:hover, .result-card.active { background: rgba(255,255,255,.05); }
+.result-play {
+  width: 28px; height: 28px; border-radius: 50%; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.05); border: 1px solid var(--accent-soft, var(--parchment)); color: var(--parchment); cursor: pointer;
+}
+.result-play svg { width: 11px; height: 11px; }
+.result-main { flex: 1; min-width: 0; }
+.result-main h4 { margin: 0 0 2px; font-size: .95rem; font-weight: 400; color: var(--ink); font-family: Georgia, serif; }
+.result-meta { font-size: .74rem; color: var(--ink-dim); font-style: italic; }
+.result-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.result-badges .badge { font-size: .6rem; padding: 1px 7px; }
+.result-actions { display: flex; flex-direction: column; gap: 6px; flex: 0 0 auto; }
+.result-action-btn {
+  font-family: -apple-system, sans-serif; font-size: .68rem; white-space: nowrap;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.16); color: var(--ink-dim);
+  border-radius: 14px; padding: 4px 9px; cursor: pointer;
+}
+.result-action-btn:hover { color: var(--ink); border-color: var(--parchment); }

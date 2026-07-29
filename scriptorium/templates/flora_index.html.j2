@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flora — The Burren Scriptorium Field Guide</title>
+<meta name="description" content="Wildflowers, grasses, herbs, and orchids of the Burren karst — {{ entries|length }} field-guide entries with Irish and Ogham names where recorded.">
+<link rel="canonical" href="{{ canonical }}">
+
+<meta property="og:title" content="Flora — The Burren Scriptorium">
+<meta property="og:description" content="Wildflowers, grasses, herbs, and orchids of the Burren karst.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:site_name" content="The Burren Scriptorium">
+
+<link rel="stylesheet" href="../assets/scriptorium.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Flora — The Burren Scriptorium",
+  "url": "{{ canonical }}",
+  "isPartOf": { "@type": "CreativeWork", "name": "The Burren Scriptorium — Field Guide" }
+}
+</script>
+</head>
+<body>
+<nav class="scriptorium-nav">
+  <a class="brand" href="../index.html">The Burren Scriptorium</a>
+  <div class="crumbs">Flora</div>
+  <div class="nav-actions">
+    <button class="search-trigger" id="searchTrigger">Search <kbd>&#8984;K</kbd></button>
+  </div>
+</nav>
+
+<div class="ambient-backdrop"><svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice"></svg></div>
+
+<main class="hub-page">
+  <h1>Flora</h1>
+  <p class="lede">Wildflowers, grasses, and herbs of the Burren karst &mdash; {{ entries|length }} entries so far, transcribed from the field sheet. Trees &amp; Shrubs and Lichen &amp; Moss are next.</p>
+
+  <div class="entry-grid">
+    {% for e in entries %}
+    <a class="entry-card" href="{{ e.slug }}/">
+      <h3>{{ e.commonName }}</h3>
+      <p class="sci">{{ e.scientificName }}</p>
+      <span class="badge">{{ e.category }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</main>
+
+<script src="../assets/scriptorium-search.js"></script>
+<script>
+  ScriptoriumSearch.init({
+    scriptoriumRootPrefix: '../',
+    dataUrls: ['../data/flora-flowers-grasses.json'],
+    entryLinkFn: function (e) { return e.slug + '/'; }
+  });
+  document.getElementById('searchTrigger').addEventListener('click', function () { ScriptoriumSearch.open(); });
+</script>
+</body>
+</html>
